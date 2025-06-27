@@ -10,8 +10,6 @@ const getCurrencies = async () => {
   const response = await axiosInstance.get<CurrencyResponse<Currency[]>>(
     "currencies",
   );
-
-  console.log(response);
   
   return response.data.response;
 };
